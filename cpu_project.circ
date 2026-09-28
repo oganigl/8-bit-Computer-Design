@@ -48,6 +48,7 @@
     <tool lib="1" name="NOT Gate"/>
     <tool lib="1" name="AND Gate"/>
     <tool lib="1" name="OR Gate"/>
+    <tool name="D-Flipflop-Raising_edge"/>
   </toolbar>
   <circuit name="XOR">
     <a name="circuit" val="XOR"/>
@@ -789,8 +790,10 @@
     <a name="clabel" val=""/>
     <a name="clabelup" val="east"/>
     <a name="clabelfont" val="SansSerif plain 12"/>
+    <wire from="(380,370)" to="(440,370)"/>
     <wire from="(310,210)" to="(360,210)"/>
     <wire from="(570,160)" to="(630,160)"/>
+    <wire from="(530,380)" to="(570,380)"/>
     <wire from="(540,100)" to="(540,130)"/>
     <wire from="(320,100)" to="(320,130)"/>
     <wire from="(430,220)" to="(470,220)"/>
@@ -802,18 +805,30 @@
     <wire from="(320,130)" to="(340,130)"/>
     <wire from="(310,170)" to="(310,210)"/>
     <wire from="(470,170)" to="(470,220)"/>
+    <wire from="(480,300)" to="(480,350)"/>
+    <wire from="(380,400)" to="(440,400)"/>
     <wire from="(630,70)" to="(630,160)"/>
     <wire from="(410,70)" to="(410,150)"/>
     <wire from="(280,100)" to="(320,100)"/>
     <wire from="(410,150)" to="(500,150)"/>
     <wire from="(310,170)" to="(470,170)"/>
+    <wire from="(450,300)" to="(480,300)"/>
     <wire from="(280,230)" to="(360,230)"/>
     <wire from="(400,130)" to="(400,190)"/>
     <comp lib="0" loc="(280,100)" name="Pin">
       <a name="tristate" val="false"/>
     </comp>
     <comp loc="(570,160)" name="Multiplexor_Latch"/>
+    <comp lib="0" loc="(570,380)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="labelloc" val="east"/>
+    </comp>
     <comp lib="0" loc="(280,230)" name="Pin">
+      <a name="tristate" val="false"/>
+    </comp>
+    <comp loc="(530,380)" name="T-FLIP-FLOP"/>
+    <comp lib="0" loc="(380,400)" name="Pin">
       <a name="tristate" val="false"/>
     </comp>
     <comp lib="0" loc="(650,160)" name="Pin">
@@ -821,8 +836,14 @@
       <a name="output" val="true"/>
       <a name="labelloc" val="east"/>
     </comp>
+    <comp lib="0" loc="(380,370)" name="Pin">
+      <a name="tristate" val="false"/>
+    </comp>
     <comp lib="1" loc="(370,130)" name="NOT Gate"/>
     <comp loc="(430,220)" name="Multiplexor_Latch"/>
+    <comp lib="0" loc="(450,300)" name="Pin">
+      <a name="tristate" val="false"/>
+    </comp>
   </circuit>
   <circuit name="D-Flipflop-Falling_Edge">
     <a name="circuit" val="D-Flipflop-Falling_Edge"/>
@@ -958,35 +979,44 @@
       <rect fill="none" height="59" stroke="#000000" stroke-width="2" width="130" x="50" y="50"/>
       <text font-family="SansSerif" font-size="12" text-anchor="middle" x="63" y="74">D</text>
       <text font-family="SansSerif" font-size="12" text-anchor="middle" x="67" y="94">CLK</text>
-      <text font-family="SansSerif" font-size="12" text-anchor="middle" x="167" y="84">O</text>
       <text font-family="SansSerif" font-size="8" text-anchor="middle" x="120" y="82">RAISING-EDGE</text>
+      <text font-family="SansSerif" font-size="12" text-anchor="middle" x="167" y="83">Q</text>
       <circ-port height="8" pin="250,230" width="8" x="46" y="66"/>
       <circ-port height="8" pin="250,310" width="8" x="46" y="86"/>
       <circ-port height="10" pin="650,160" width="10" x="175" y="75"/>
       <circ-anchor facing="east" height="6" width="6" x="177" y="77"/>
     </appear>
+    <wire from="(410,70)" to="(410,140)"/>
+    <wire from="(310,210)" to="(360,210)"/>
+    <wire from="(570,160)" to="(630,160)"/>
+    <wire from="(330,160)" to="(330,360)"/>
+    <wire from="(250,230)" to="(360,230)"/>
+    <wire from="(630,70)" to="(630,160)"/>
+    <wire from="(540,100)" to="(540,130)"/>
+    <wire from="(290,100)" to="(290,310)"/>
+    <wire from="(330,160)" to="(440,160)"/>
+    <wire from="(320,100)" to="(320,130)"/>
+    <wire from="(250,310)" to="(290,310)"/>
+    <wire from="(430,220)" to="(470,220)"/>
     <wire from="(320,100)" to="(540,100)"/>
-    <wire from="(410,150)" to="(500,150)"/>
     <wire from="(410,70)" to="(630,70)"/>
     <wire from="(310,170)" to="(470,170)"/>
+    <wire from="(410,140)" to="(440,140)"/>
     <wire from="(630,160)" to="(650,160)"/>
     <wire from="(470,170)" to="(500,170)"/>
+    <wire from="(470,150)" to="(500,150)"/>
     <wire from="(290,100)" to="(320,100)"/>
     <wire from="(370,130)" to="(400,130)"/>
     <wire from="(320,130)" to="(340,130)"/>
-    <wire from="(310,210)" to="(360,210)"/>
-    <wire from="(570,160)" to="(630,160)"/>
     <wire from="(310,170)" to="(310,210)"/>
-    <wire from="(250,230)" to="(360,230)"/>
-    <wire from="(630,70)" to="(630,160)"/>
+    <wire from="(320,360)" to="(330,360)"/>
     <wire from="(470,170)" to="(470,220)"/>
-    <wire from="(540,100)" to="(540,130)"/>
-    <wire from="(410,70)" to="(410,150)"/>
-    <wire from="(290,100)" to="(290,310)"/>
-    <wire from="(320,100)" to="(320,130)"/>
     <wire from="(400,130)" to="(400,190)"/>
-    <wire from="(250,310)" to="(290,310)"/>
-    <wire from="(430,220)" to="(470,220)"/>
+    <comp lib="1" loc="(470,150)" name="AND Gate">
+      <a name="size" val="30"/>
+      <a name="inputs" val="2"/>
+    </comp>
+    <comp lib="0" loc="(320,360)" name="Constant"/>
     <comp loc="(570,160)" name="Multiplexor_Latch"/>
     <comp loc="(430,220)" name="Multiplexor_Latch"/>
     <comp lib="0" loc="(650,160)" name="Pin">
@@ -1001,5 +1031,65 @@
     <comp lib="0" loc="(250,310)" name="Pin">
       <a name="tristate" val="false"/>
     </comp>
+  </circuit>
+  <circuit name="T-FLIP-FLOP">
+    <a name="circuit" val="T-FLIP-FLOP"/>
+    <a name="clabel" val=""/>
+    <a name="clabelup" val="east"/>
+    <a name="clabelfont" val="SansSerif plain 12"/>
+    <appear>
+      <rect fill="none" height="57" stroke="#000000" stroke-width="2" width="88" x="448" y="172"/>
+      <text font-family="SansSerif" font-size="12" text-anchor="middle" x="460" y="193">T</text>
+      <text font-family="SansSerif" font-size="12" text-anchor="middle" x="468" y="224">CLK</text>
+      <text font-family="SansSerif" font-size="12" text-anchor="middle" x="526" y="204">Q</text>
+      <text font-family="SansSerif" font-size="12" text-anchor="middle" x="493" y="186">Reset_N</text>
+      <circ-port height="8" pin="130,130" width="8" x="446" y="186"/>
+      <circ-port height="8" pin="170,160" width="8" x="446" y="216"/>
+      <circ-port height="10" pin="530,140" width="10" x="535" y="195"/>
+      <circ-port height="8" pin="110,210" width="8" x="486" y="166"/>
+      <circ-anchor facing="east" height="6" width="6" x="537" y="197"/>
+    </appear>
+    <wire from="(500,70)" to="(500,140)"/>
+    <wire from="(130,130)" to="(190,130)"/>
+    <wire from="(210,150)" to="(210,160)"/>
+    <wire from="(250,120)" to="(250,130)"/>
+    <wire from="(210,150)" to="(330,150)"/>
+    <wire from="(310,120)" to="(310,130)"/>
+    <wire from="(170,160)" to="(210,160)"/>
+    <wire from="(460,140)" to="(500,140)"/>
+    <wire from="(160,110)" to="(190,110)"/>
+    <wire from="(500,140)" to="(530,140)"/>
+    <wire from="(240,110)" to="(240,210)"/>
+    <wire from="(310,130)" to="(330,130)"/>
+    <wire from="(290,120)" to="(310,120)"/>
+    <wire from="(160,70)" to="(160,110)"/>
+    <wire from="(160,70)" to="(500,70)"/>
+    <wire from="(230,120)" to="(250,120)"/>
+    <wire from="(240,110)" to="(260,110)"/>
+    <wire from="(250,130)" to="(260,130)"/>
+    <wire from="(110,210)" to="(240,210)"/>
+    <comp lib="0" loc="(110,210)" name="Pin">
+      <a name="tristate" val="false"/>
+    </comp>
+    <comp lib="0" loc="(530,140)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="0" loc="(170,160)" name="Pin">
+      <a name="tristate" val="false"/>
+    </comp>
+    <comp lib="0" loc="(130,130)" name="Pin">
+      <a name="tristate" val="false"/>
+    </comp>
+    <comp lib="1" loc="(290,120)" name="AND Gate">
+      <a name="size" val="30"/>
+      <a name="inputs" val="2"/>
+    </comp>
+    <comp lib="1" loc="(230,120)" name="XOR Gate">
+      <a name="size" val="30"/>
+      <a name="inputs" val="2"/>
+    </comp>
+    <comp loc="(460,140)" name="D-Flipflop-Raising_edge"/>
   </circuit>
 </project>
